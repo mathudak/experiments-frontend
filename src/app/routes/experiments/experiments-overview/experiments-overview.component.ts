@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Experiments } from 'app/core/interfaces';
 
 @Component({
   selector: 'app-experiments-overview',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./experiments-overview.component.scss'],
 })
 export class ExperimentsOverviewComponent implements OnInit {
+  experiments: Array<Experiments>;
+
   constructor() {}
 
   ngOnInit(): void {

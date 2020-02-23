@@ -1,0 +1,8 @@
+<mat-list class="experiments-list">
+  <mat-list-item *ngFor="let experiment of experiments; let i=index">
+    <span class="">{{experiment.name}}</span>
+    <span class="spacer"></span>
+    <span class="">{{experiment.duration}}</span>
+    <span class="">{{experiment.state}}</span>
+  </mat-list-item>
+</mat-list>

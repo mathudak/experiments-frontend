@@ -1,1 +1,18 @@
-<p>experiments-overview works!</p>
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Experiments</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <app-experiments-list></app-experiments-list>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-flat-button color="accent">
+      <mat-icon>play_circle_filled</mat-icon>
+      Execute
+    </button>
+    <button mat-flat-button color="warn">
+      <mat-icon>cancel</mat-icon>
+      Stop
+    </button>
+  </mat-card-actions>
+</mat-card>
