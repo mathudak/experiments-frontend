@@ -1,5 +1,19 @@
 <mat-toolbar color="primary">
   <mat-toolbar-row>
-    <span>Test</span>
+    <span>Header</span>
+  </mat-toolbar-row>
+  <mat-toolbar-row>
+    <a class="toolbar-link" [routerLink]="[ '/experiments']" routerLinkActive="active-link">
+      <mat-icon>settings_input_composite</mat-icon>
+      <span>Experiments</span>
+    </a>
+    <a class="toolbar-link" [routerLink]="[ '/overview']" routerLinkActive="active-link">
+      <mat-icon>history</mat-icon>
+      <span>Overview</span>
+    </a>
+    <a class="toolbar-link" [routerLink]="[ '/settings']" routerLinkActive="active-link">
+      <mat-icon>settings</mat-icon>
+      <span>Settings</span>
+    </a>
   </mat-toolbar-row>
 </mat-toolbar>
