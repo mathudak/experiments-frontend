@@ -10,7 +10,7 @@ module.exports =  {
     sourceType:  'module',  // Allows for the use of imports
   },
   "rules": {
-    "@typescript-eslint/no-empty-function": ["error", { "allow": ["constructors"] }],
+    "@typescript-eslint/no-empty-function": ["warn", { "allow": ["constructors"] }],
     "@typescript-eslint/indent": ["error", 2, {
         "SwitchCase": 1,
         "CallExpression": {"arguments": "first"},
