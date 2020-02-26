@@ -26,6 +26,7 @@ $fontConfig: (
   input: mat-typography-level(inherit, 1.125, 400, 'Nunito', 1.5px)
 );
 
+@include mat-core($fontConfig);
 // Foreground Elements
 
 // Light Theme Text

@@ -1,6 +1,21 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --spacing-s: 1rem;
+  --spacing-m: 1.3rem;
+  --spacing-l: 1.6rem;
+  --spacing-border-gap: 8rem;
+  --input-font-size: 1.3rem;
+  --alert-color: #ffce00;
+}
 
-html, body { height: 100%; }
+html {
+  position: relative;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body, app-root { height: 100%; }
 body { margin: 0; font-family: Nunito, "Helvetica Neue", sans-serif; }
 
 app-simple-layout {
@@ -11,10 +26,17 @@ app-simple-layout {
 
   main {
     flex: 1 0 auto;
-    padding: 1rem 0.5rem;
   }
 
   footer {
     flex-shrink: 0;
   }
+}
+
+router-outlet {
+  height: 100%;
+  width: 100%;
+}
+.spacer {
+  flex: 1 1 auto;
 }
