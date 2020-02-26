@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Experiments } from 'app/core/interfaces';
+import { ExperimentsService } from 'app/core/experiments/experiments.service';
+import { tap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-experiments-list',
@@ -7,11 +9,14 @@ import { Experiments } from 'app/core/interfaces';
   styleUrls: ['./experiments-list.component.scss'],
 })
 export class ExperimentsListComponent implements OnInit {
-  experiments: Array<Experiments>;
+  experiments: Array<Experiments> = [];
 
-  constructor() {}
+  constructor(private experimentsService: ExperimentsService) {}
 
   ngOnInit(): void {
-    console.log('Experiments list init');
+    this.experimentsService
+      .getExperiments()
+      .pipe(tap(experiments => (this.experiments = experiments)))
+      .subscribe();
   }
 }

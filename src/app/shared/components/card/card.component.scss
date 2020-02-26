@@ -1,0 +1,86 @@
+@import '~@angular/material/theming';
+@import '../../../../theme/blue-theme';
+
+// Create a config with the default typography levels.
+
+.content-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 0;
+  overflow: hidden;
+  background: mat-color(map-get($theme, background), background);
+  align-content: stretch;
+  align-items: stretch;
+
+  .content-alert ::ng-deep > * {
+    background: var(--warn-darker-color);
+    color: var(--warn-lighter-color);
+    padding: var(--spacing-s) var(--spacing-border-gap);
+    font-size: mat-font-size($fontConfig, subheading-2);
+    font-family: mat-font-family($fontConfig);
+    font-weight: 400;
+    top: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    position: absolute;
+    z-index: 1000;
+  }
+
+  .content-header {
+    & > div {
+      height: 100%;
+      min-height: 4rem;
+    }
+    background-color: rgb(250, 250, 250);
+    border-bottom: 1px solid #d4d6db;
+    margin: 0;
+    .mat-card-header-text {
+      display: none;
+      margin: 0;
+    }
+    width: 100%;
+  }
+
+  .content-content {
+    flex: 1 1 auto;
+    border-radius: 0;
+    padding: 0 1rem;
+    overflow: auto;
+    flex-basis: 99%;
+    ::ng-deep > * {
+      height: 100%;
+    }
+  }
+
+  .content-actions {
+    flex-shrink: 0;
+
+    ::ng-deep.card-actions {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      height: 100%;
+      height: 4.5rem;
+      margin: 0;
+      padding: 0.25rem 1rem;
+
+      &.toolbar {
+        border-top: 1px solid #a4a5a7;
+        background-color: #ddd;
+      }
+
+      button {
+        width: 100%;
+        margin: 1rem 2rem;
+        padding: 0.5rem;
+        mat-icon {
+          font-size: 1.7rem;
+          margin-right: 0.8rem;
+        }
+      }
+    }
+  }
+}

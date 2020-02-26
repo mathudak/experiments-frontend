@@ -1,17 +1,16 @@
 .experiments-list {
-  mat-list-item {
+  .mat-list-item {
     color: blue;
 
     .mat-list-item-content {
-      font-weight: 600;
-      
-      span {
-        margin: 0 0.5rem 0 0;
+      .state {
+        justify-self: flex-end;
       }
   
       .spacer {
         width: 100%;
       }
     }
+
   }
 }

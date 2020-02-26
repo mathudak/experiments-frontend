@@ -8,7 +8,9 @@ import { MatCardModule } from '@angular/material/card';
 import { MatListModule } from '@angular/material/list';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { ExperimentsListComponent } from './components/experiments-list/experiments-list.component';
+import { SharedModule } from '@shared/shared.module';
 
 @NgModule({
   declarations: [ExperimentsPreparationComponent, ExperimentsOverviewComponent, ExperimentsListComponent],
@@ -19,6 +21,8 @@ import { ExperimentsListComponent } from './components/experiments-list/experime
     MatListModule,
     MatButtonModule,
     MatIconModule,
+    MatProgressSpinnerModule,
+    SharedModule,
   ],
 })
 export class ExperimentsModule {}

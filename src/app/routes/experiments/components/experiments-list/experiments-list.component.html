@@ -1,8 +1,12 @@
 <mat-list class="experiments-list">
+  <mat-progress-spinner *ngIf="experiments.length === 0"
+    color="accent"
+    mode="indeterminate"
+  ></mat-progress-spinner>
   <mat-list-item *ngFor="let experiment of experiments; let i=index">
     <span class="">{{experiment.name}}</span>
-    <span class="spacer"></span>
+ 
     <span class="">{{experiment.duration}}</span>
-    <span class="">{{experiment.state}}</span>
+    <span class="state">{{experiment.state}}</span>
   </mat-list-item>
 </mat-list>
